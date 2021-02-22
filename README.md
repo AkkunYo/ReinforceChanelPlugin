@@ -51,7 +51,7 @@ buildscript {
  }
 
   dependencies {
-        classpath "com.zkyml.plugin:reinforce:1.0.3"
+        classpath "com.zkyml.plugin:reinforce:1.0.4"
   }
 }
 ```
