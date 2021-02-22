@@ -51,7 +51,7 @@ buildscript {
  }
 
   dependencies {
-        classpath "com.zkyml.plugin:reinforce:1.0.1.7"
+        classpath "com.zkyml.plugin:reinforce:1.0.3"
   }
 }
 ```
@@ -63,6 +63,11 @@ ReinForceChannels {
     reinforceType = "360"
     //多渠道类型 2种方式 walle vasdolly
     channelType = "walle"
+
+    //蒲公英上传key以及渠道，key为空或者渠道不存在则不上传蒲公英
+    pgyKey = "key"
+    pgyChannel = "pgy"
+
     //多渠道配置,二选一,优先channelstr,没有才channelFile,默认channelstr=default
     channelStr = "yyb,pgy"
     //channelFile = file("channel.txt").absolutePath
@@ -71,9 +76,9 @@ ReinForceChannels {
         // 支持该加固
         support = true
         // 配置自己的360账号
-        user = properties.getProperty("USER_360", "")
+        user = "360加固必填"
         // 配置自己的360账号密码
-        pass = properties.getProperty("PASS_360", "")
+        pass = "360加固必填"
         // 配置自己的360加固文件jiagu.jar和lib的文件夹位置
         path = file("build/jiagu/jiagu.jar").absolutePath
         /** 增值配置 默认配置空. 其它 -x86 -data -crashlog -vmp -nocert*/
@@ -86,9 +91,9 @@ ReinForceChannels {
         // 配置自己的乐固加固文件路径 可以选择不配置使用默认内置的
         path = file("build/jiagu/ms-shield.jar").absolutePath
         // 配置自己的乐固secretId
-        secretId =   ""
+        secretId = "乐固加固必填"
         // 配置自己的乐固secretKey
-        secretKey =   ""
+        secretKey = "乐固加固必填"
     }
 }
 ```
