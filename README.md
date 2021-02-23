@@ -51,7 +51,7 @@ buildscript {
  }
 
   dependencies {
-        classpath "com.zkyml.plugin:reinforce:1.0.4"
+        classpath "com.zkyml.plugin:reinforce:+"
   }
 }
 ```
@@ -72,7 +72,7 @@ ReinForceChannels {
     channelStr = "yyb,pgy"
     //channelFile = file("channel.txt").absolutePath
     reinforce360 {
-    autoSign = true
+        autoSign = true
         // 支持该加固
         support = true
         // 配置自己的360账号
@@ -85,7 +85,7 @@ ReinForceChannels {
         addConfig = ""
     }
     reinforceLe {
-    autoSign = true
+        autoSign = true
         // 支持该加固
         support = true
         // 配置自己的乐固加固文件路径 可以选择不配置使用默认内置的
@@ -98,3 +98,8 @@ ReinForceChannels {
 }
 ```
 ------
+
+### 该插件参考以下项目：
+* [AndroidReinforcePlugin](https://github.com/tomlezen/AndroidReinforcePlugin)
+* [reinforce_walle](https://github.com/thisleo/reinforce_walle)
+
